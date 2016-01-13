@@ -56,7 +56,8 @@ kortemy@gmail.com
 - Encoders and decoders
 - Crypto algorithms
 
-* Go tool
+* Tooling
+- Excellent go tool
 - go get
 - go fmt
 - go doc
@@ -119,6 +120,13 @@ is the equivalent to
 - Similar to slices, but indexed with other types besides integers
 .play maps.go /^func main/,/^}/
 
+* Functions
+- Support for functional programming
+- func is a type
+- Can be assigned to variables, passed as argument
+.code functions.go /^func g/,/^}/
+.play functions.go /^func main/,/^}/
+
 * Structs
 - Object-like data structure
 - A type which contains named fields
@@ -176,10 +184,79 @@ is the equivalent to
 .play panic.go /^func main/,/^}/
 
 * Deferred statements
+- Keyword defer
 - Executes when current function returns
 - Useful for various cleanup actions
 .play defer.go /^func main/,/^}/
 
 * Goroutines
-- Provide async execution
+- Keyword go
+- Provides asynchronous execution
 - Kinda like threads, but super lightweight
+.code goroutines.go /^func say/,/^}/
+.play goroutines.go /^func main/,/^}/
+
+* Channels
+- Pipe system used as for communication between concurrent goroutines
+- Send values to channel in one goroutine, receive it in another goroutine
+- Sending and receiving from a channel is a blocking call
+- You can send another channel through a channel
+.play channels.go /^func main/,/^}/
+
+* Buffered channels
+- Channels can act as message queues
+- Sending and receiving will not block as long as the channel buffer is not full
+.play bufferedchannels.go /^func main/,/^}/
+
+* What's it good for and common criticism
+
+* Who uses Go?
+- Huge adoption by leading IT companies
+- Very popular among startups
+- Google, Basecamp, Docker, Dropbox, eBay, Facebook, Heroku, Medium, Netflix, SpaceX, SoundCloud, StackExchange, Tumblr, Twitch, Twitter, Uber
+
+* Common criticism
+- Type system and no generics
+- Error handling and no exceptions
+- Lack of syntaxic sugar
+- Bad dependency management
+- Young and weak ecosystem
+
+* Where it excels
+- It is a general purpose language, good fit for anything
+- Tooling and cli applications
+- Microservices
+- Rapid prototyping
+- Applications with intense networking
+- Great for building databases
+
+* Where it falls short?
+- No where in particular
+- But that doesn't mean Go is the best choice for every job
+Go wouldn't be perfect for:
+
+- Huge monolithic applications
+- Where tight memory management is essential
+- Dynamic environments
+
+* Future of Go
+- Very short release cycles
+
+1.6 to be released soon
+
+- Bringing Go to mobile platforms
+- Additionally optimizing GC
+- HTTP2 support
+- Built in vendoring solution
+
+Community
+
+- Gopher Gala
+
+* Conclusion
+- There are only two kinds of languages: the ones people complain about and the ones nobody uses.  - Bjarne Stroustrup
+- No language is an universal solution to all problems
+- Go isn't perfect, but it's refreshing
+- Very comfortable and easy to use
+
+Have fun using Go!
