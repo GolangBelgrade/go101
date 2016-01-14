@@ -140,7 +140,7 @@ kortemy@gmail.com
 * Who uses Go?
 - Huge adoption by leading IT companies
 - Very popular among startups
-- Google, Basecamp, Docker, Dropbox, eBay, Facebook, Heroku, Medium, Netflix, SpaceX, SoundCloud, StackExchange, Tumblr, Twitch, Twitter, Uber
+.image companies.jpg
 
 * Common criticism
 - Type system and no generics
