@@ -7,8 +7,8 @@ type Address struct {
 	Street string
 }
 type Person struct {
-	Addr Address
-	Name string
+	Name    string
+	Address Address
 }
 
 // END OMIT
@@ -18,5 +18,4 @@ func main() {
 		Name:    "Pera",
 	}
 	fmt.Println(pera)
-	fmt.Println(pera.Street)
 }

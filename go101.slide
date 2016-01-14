@@ -34,8 +34,7 @@ kortemy@gmail.com
 .image concepts.jpg 500 _
 
 * Simplicity
-- Slim language specification
-- Around 60 pages only!
+- Slim and simplified language specification
 - Very easy to get into, both junior and senior friendly
 - Stripped down of some common language features
 .image simplicity.png 800 _
@@ -44,98 +43,40 @@ kortemy@gmail.com
 - Familiar C-like syntax
 - Blazingly fast compile times
 - Garbage collector
-- Type inference (like in dynamic languages)
+- Some dynamic typing features
 - Very rich standard library
 - Excellent go tool
-
-* Standard library
-- Web framework
-- Testing framework
-- HTML templating
-- Common database interface with built-in SQL driver
-- Encoders and decoders
-- Crypto algorithms
+.image productivity.png 250 _
 
 * Tooling
 - Excellent go tool
-- go get
-- go fmt
-- go doc
-- go lint and go vet
+- go get will fetch you dependencies
+- go fmt will format your code
+- go doc will print you documentation
+- go lint and go vet will analyze your code quality
 - Many more community provided tools
+.image tools.jpg 250 _
 
-* Syntax and features
+* Prominent language features
 
-* Hello, Belgrade!
-.play hello.go
-
-* Hello, Belgrade!
+* Familiar syntax
 .play complex.go
 
-* Type inference
-- No need to explicitly declare variable type by using := operator
-- Dynamic typing in a static language
-
-For example:
-
-  var number int = 0
-is the equivalent to
-
-  number := 0
-Like that
-
-  var name string = "Pera"
-
-is the equivalent to
-
-  name := "Pera"
-
-* Type inference
-- Works for all types
-
-  var city City = &City{"Belgrade"}
-
-is the equivalent to
-
-  city := &City{"Belgrade"}
-
-- Very useful when assigning from multiple-return functions
-  result, err := someFunctionWhitchReturnsTwoThings()
-
-- var for globals
-- := for locally scoped variables
-
-* Slices
-- Slices are a major data type in Go
-- Like arrays, but not limited by the number of elements
-- Only defined by the type they contain
-.play slices1.go /^func main/,/^}/
-
-* Slices
-- Built-in functions for manipulating slices
-- len(), append(), copy() and cap()
-.play slices2.go /^func main/,/^}/
-
-* Maps
-- Similar to slices, but indexed with other types besides integers
-.play maps.go /^func main/,/^}/
-
-* Functions
+* Functional Go
 - Support for functional programming
-- func is a type
+- Functions are first class citizens
 - Can be assigned to variables, passed as argument
 .code functions.go /^func g/,/^}/
 .play functions.go /^func main/,/^}/
 
-* Structs
-- Object-like data structure
-- A type which contains named fields
+* Object Oriented Go
+- Struct is object-like data structure
 - Can have functions attached to it as methods
 .code structs1.go /START OMIT/,/END OMIT/
 .play structs1.go /^func main/,/^}/
 
-* Structs
-- No inheritance, only composition
+* Object Oriented Go
+- Prefers composition over inheritance
 .code structs2.go /START OMIT/,/END OMIT/
 .play structs2.go /^func main/,/^}/
 
@@ -155,14 +96,15 @@ is the equivalent to
 - A way to know if we are dealing with values or references
 - Pointer is a type, denoted with *
 - Type *T is a pointer to T value
+  var a Person // a is a Person
+  var b *Person // b is a pointer to a Person
 - Operator & gets a pointer from a value
+  b := &a
 - Operator * gets a value from a pointer
+  c := *b
 
 * Pointers
 .play pointers1.go
-
-* Pointers
-.play pointers2.go
 
 * Multiple return values
 - Every function can return 0, 1, 2, 3... n values
@@ -171,26 +113,15 @@ is the equivalent to
 .code multi.go /^func someFunction/,/^}/
 .play multi.go /^func main/,/^}/
 
-* Err...Errors
+* Err...Error handling
 - Errors instead of exceptions
 - Because errors are common, expected and not exceptions
 - error is a type
 .code errors.go /^func someFunction/,/^}/
 .play errors.go /^func main/,/^}/
-
-* Panic and recover
-- If you really, really like exceptions
-.code panic.go /^func someFunction/,/^}/
-.play panic.go /^func main/,/^}/
-
-* Deferred statements
-- Keyword defer
-- Executes when current function returns
-- Useful for various cleanup actions
-.play defer.go /^func main/,/^}/
+- panic() and recover() if you really like exceptions
 
 * Goroutines
-- Keyword go
 - Provides asynchronous execution
 - Kinda like threads, but super lightweight
 .code goroutines.go /^func say/,/^}/
@@ -199,14 +130,10 @@ is the equivalent to
 * Channels
 - Pipe system used as for communication between concurrent goroutines
 - Send values to channel in one goroutine, receive it in another goroutine
-- Sending and receiving from a channel is a blocking call
+- Channels can be buffered
+- Sending and receiving on a full channel is a blocking call
 - You can send another channel through a channel
 .play channels.go /^func main/,/^}/
-
-* Buffered channels
-- Channels can act as message queues
-- Sending and receiving will not block as long as the channel buffer is not full
-.play bufferedchannels.go /^func main/,/^}/
 
 * What's it good for and common criticism
 
@@ -221,37 +148,33 @@ is the equivalent to
 - Lack of syntaxic sugar
 - Bad dependency management
 - Young and weak ecosystem
+.image criticism.jpg 400 _
 
 * Where it excels
 - It is a general purpose language, good fit for anything
 - Tooling and cli applications
-- Microservices
+- Microservices, or at least miniservices
 - Rapid prototyping
-- Applications with intense networking
+- Applications with intense networking, filesystem operations
 - Great for building databases
+.image yes.jpg 300 _
 
 * Where it falls short?
 - No where in particular
 - But that doesn't mean Go is the best choice for every job
-Go wouldn't be perfect for:
-
 - Huge monolithic applications
 - Where tight memory management is essential
 - Dynamic environments
+.image no.jpg 300 _
 
 * Future of Go
 - Very short release cycles
-
-1.6 to be released soon
-
-- Bringing Go to mobile platforms
-- Additionally optimizing GC
-- HTTP2 support
-- Built in vendoring solution
+- 1.6 to be released soon
 
 Community
 
 - Gopher Gala
+.image community.jpg 400 _
 
 * Conclusion
 - There are only two kinds of languages: the ones people complain about and the ones nobody uses.  - Bjarne Stroustrup
