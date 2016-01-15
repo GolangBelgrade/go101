@@ -23,6 +23,14 @@ kortemy@gmail.com
 
 * Goals and philosophy
 
+* Motivation
+- Computers are faster, development is not
+- Cumbersome type systems and slow compile times
+- Weak support for garbage collection and concurrency
+- Multi-core processors not used efficiently
+- Efficient compilation, efficient execution and ease of programming in one
+.image concepts.jpg 500 _
+
 * Core concepts
 - Strongly typed, statically compiled
 - Not backed by a VM
@@ -31,7 +39,6 @@ kortemy@gmail.com
 - No dominant paradigm
 - Both object-oriented and functional
 - Neither object-oriented nor functional
-.image concepts.jpg 500 _
 
 * Simplicity
 - Slim and simplified language specification
@@ -49,7 +56,6 @@ kortemy@gmail.com
 .image productivity.png 250 _
 
 * Tooling
-- Excellent go tool
 - go get will fetch you dependencies
 - go fmt will format your code
 - go doc will print you documentation
@@ -145,17 +151,17 @@ kortemy@gmail.com
 * Common criticism
 - Type system and no generics
 - Error handling and no exceptions
-- Lack of syntaxic sugar
+- Too simple
 - Bad dependency management
 - Young and weak ecosystem
 .image criticism.jpg 400 _
 
 * Where it excels
 - It is a general purpose language, good fit for anything
+- Rapid prototyping
 - Tooling and cli applications
 - Microservices, or at least miniservices
-- Rapid prototyping
-- Applications with intense networking, filesystem operations
+- Intensive IO stuff - networking, filesystems
 - Great for building databases
 .image yes.jpg 300 _
 
@@ -170,14 +176,13 @@ kortemy@gmail.com
 * Future of Go
 - Very short release cycles
 - 1.6 to be released soon
-
-Community
-
 - Gopher Gala
 .image community.jpg 400 _
 
 * Conclusion
-- There are only two kinds of languages: the ones people complain about and the ones nobody uses.  - Bjarne Stroustrup
+"There are only two kinds of languages: the ones people complain about and the ones nobody uses."
+- Bjarne Stroustrup, creator of C++
+
 - No language is an universal solution to all problems
 - Go isn't perfect, but it's refreshing
 - Very comfortable and easy to use
