@@ -6,14 +6,14 @@ import (
 )
 
 func main() {
-	message := make(chan string)
+	ch := make(chan string)
 
 	go func() {
 		time.Sleep(3 * time.Second)
-		message <- "Hello!"
+		ch <- "Hello!"
 	}()
 	fmt.Println("Waiting...")
 
-	result := <-message
+	result := <-ch
 	fmt.Println(result)
 }

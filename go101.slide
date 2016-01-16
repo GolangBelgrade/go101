@@ -18,7 +18,7 @@ kortemy@gmail.com
 * History
 - Initial release in 2009
 - Developed at Google
-- Creted by Rob Pike, Ken Thompson and Robert Griesemer
+- Created by Rob Pike, Ken Thompson and Robert Griesemer
 .image history.png _ 900
 
 * Goals and philosophy
@@ -33,12 +33,12 @@ kortemy@gmail.com
 
 * Core concepts
 - Strongly typed, statically compiled
-- Not backed by a VM
-- Native compilation on all (seriously) platforms
+- Not backed by a VM, native compilation on all platforms
 - Designed for concurrency
 - No dominant paradigm
 - Both object-oriented and functional
 - Neither object-oriented nor functional
+.image productivity.png 250 _
 
 * Simplicity
 - Slim and simplified language specification
@@ -53,14 +53,6 @@ kortemy@gmail.com
 - Some dynamic typing features
 - Very rich standard library
 - Excellent go tool
-.image productivity.png 250 _
-
-* Tooling
-- go get will fetch you dependencies
-- go fmt will format your code
-- go doc will print you documentation
-- go lint and go vet will analyze your code quality
-- Many more community provided tools
 .image tools.jpg 250 _
 
 * Prominent language features
@@ -176,6 +168,7 @@ kortemy@gmail.com
 * Future of Go
 - Very short release cycles
 - 1.6 to be released soon
+- Mobile support
 - Gopher Gala
 .image community.jpg 400 _
 
